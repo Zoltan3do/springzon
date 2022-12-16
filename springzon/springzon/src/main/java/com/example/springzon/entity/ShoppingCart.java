@@ -19,7 +19,6 @@ public class ShoppingCart {
     private Long idShoppingCart;
 
     @OneToOne(mappedBy = "idShoppingCart", fetch= FetchType.EAGER)
-
     private User user;
 
     @OneToMany(mappedBy = "shoppingCart", fetch = FetchType.EAGER)
