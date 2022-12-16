@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="springzon" target="18" />
+      <module name="springzon" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

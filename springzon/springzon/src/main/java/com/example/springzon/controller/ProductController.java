@@ -14,10 +14,15 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
+  //  @GetMapping("/all")
+   // public List<Product> getAllProduct(){
+    //    return productService.findAll();
+    //}
     @GetMapping("/all")
     public List<Product> getAllProduct(){
         return productService.findAll();
     }
+
     @PostMapping("/addProduct")
     public void addProduct(@RequestBody Product product){
         productService.addProduct(product);

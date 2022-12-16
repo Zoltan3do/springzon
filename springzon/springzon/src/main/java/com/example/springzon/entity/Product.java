@@ -1,13 +1,13 @@
 package com.example.springzon.entity;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import javax.persistence.*;
+import com.fasterxml.jackson.databind.util.ArrayBuilders;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
 import java.util.List;
-
 @Entity
 @Data
 @AllArgsConstructor
@@ -18,6 +18,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Long idProduct;
+
     @Column
     private String name;
   //  @Column
