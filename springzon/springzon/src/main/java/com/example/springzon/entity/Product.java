@@ -22,7 +22,7 @@ public class Product {
     private String name;
   //  @Column
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JsonManagedReference
+    //@JsonManagedReference
     @JoinColumn(name="description_id")
     private Description description;
     @ManyToOne(cascade= CascadeType.ALL, fetch = FetchType.EAGER)

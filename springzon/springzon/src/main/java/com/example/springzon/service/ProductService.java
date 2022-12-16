@@ -35,23 +35,13 @@ public class ProductService {
     //create
 
     public Product addProduct(Product prodotto){
-        Optional<ShoppingCart> shoppingCart= shoppingCartRepository.findById(prodotto.getShoppingCart().getIdShoppingCart());
-       if(shoppingCart.isPresent()){
-
-           prodotto.setShoppingCart(shoppingCart.get());
-       }
-       //descriptionRepository.save(prodotto.getDescription());
-        prodotto.setDescription(descriptionRepository.save(prodotto.getDescription()));
         return productRepository.save(prodotto);
+       //descriptionRepository.save(prodotto.getDescription());
     }
     //update
     public Product updateProduct(Long id, Product prodotto) {
-        if (productRepository.existsById(id)) {
             prodotto.setIdProduct(id);
            return productRepository.save(prodotto);
-        }
-        else
-          return null;
     }
 
     //delete

@@ -18,10 +18,6 @@ public class ShoppingCart {
     @Column
     private Long idShoppingCart;
 
-    @Column
-    private double totalCost;
-
-
     @OneToOne(mappedBy = "idShoppingCart", fetch= FetchType.EAGER)
 
     private User user;

@@ -22,7 +22,7 @@ public class Description {
     private String category;
   //  @Column
     @OneToOne(mappedBy = "description", fetch = FetchType.EAGER)
-    @JsonManagedReference
+    //@JsonManagedReference
     private Product product;
 
 }
